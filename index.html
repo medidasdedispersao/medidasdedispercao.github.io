@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medidas de Disperção</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="calc.png"/>
+
+    <meta property="og:url" content="https://estatistica.github.io">
+    <meta property="og:title" content="Medidas de Disperção">
+    <meta property="og:site_name" content="Medidas de Disperção">
+    <meta property="og:description" content="Ferramenta online para calculo de variancia, desvio padrão e coeficiente de variação, através das tabelas com dados ROL, agrupados e com intervalo de classe.">
+    <meta property="og:image" content="http://estatistica.github.io/calc.png">
+    <meta property="og:type" content="website">
+
+
+
+   
+
+</head>
+<body>
+  <script type="text/javascript">
+    var linhas = 0;
+    function setLinhas()
+    {
+      linhas = document.getElementById("linhas").value;
+    }
+    function calcular()
+    {
+      var dropdown1 = document.getElementById("tipoInsercao");
+      var tipoSelecionado = dropdown1.options[dropdown1.selectedIndex].value;
+      var elementos = document.getElementById("linhas").value;
+      if(tipoSelecionado == 1)
+      {
+          calcularRol();
+      }
+      else if(tipoSelecionado == 2)
+      {
+          calcularAgrupados();
+      }
+      else
+      {
+          calcularClasse();
+          //window.location="gerar_classe.php?linhas="+elementos;   
+      }
+      
+    }
+  </script>
+  <nav>
+    <ul>
+      <li title="Inserir dados"><a href="#insercaoDados"><i class="fa fa-pencil-square-o"></i></a></li>
+      <li title="Sobre o grupo"><a href="#sobreGrupo"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+    </ul>
+  </nav>
+
+  <section id="insercaoDados">
+    <form method="post" >
+      <label for="tipoInsercao">Escolha a forma de inserção de dados</label><br>
+      <select id="tipoInsercao" onchange="gerarCampo(this)">
+          <<option value="" selected></option>
+          <option value="1">Dados em Rol</option>
+          <option value="2">Dados em Tabela</option>
+          <option value="3">Dados em Tabela com Intervalo de classes</option>
+      </select>
+    </form>
+  </section>
+  <section id="tabelas2" style="visibility: hidden;">
+    <div class="col-md-8 col-md-offset-2" id="card">
+                <br><br>
+                <h2 class="text-center" id="tipo_tabela"></h2>
+                <br><br>
+                
+                  <div id="tabelas">
+
+                  </div>
+                    <tr>
+                        <td>
+                            <!-- <button type="submit" class="btn btn-success form-control">CALCULAR</button> -->
+                        </td>
+                    </tr>
+                <button type="button" class="btn btn-success form-control" onclick="setLinhas();calcular();">CALCULAR</button>
+                <br><br>
+                <button type="button" class="btn btn-danger form-control" onclick="setLinhas();proxima_pagina();">LIMPAR</button>
+                
+                <br><br>
+                <!-- TABELA DE RESULTADOS -->
+                <div class="col-md-8 col-md-offset-2">
+                    <table class="table table-responsive table-bordered">
+                        <tr class=".success">
+                            <td>Amplitude = </td>
+                            <td><p id="amplitude"></p></td>
+                        </tr>
+                        <tr class=".success">
+                            <td>Variancia = </td>
+                            <td><p id="variancia"></p></td>
+                        </tr>
+                        <tr class=".success">
+                            <td>Desvio padrao = </td>
+                            <td><p id="desvio_padrao"></p></td>
+                        </tr>
+                        <tr class=".success">
+                            <td>Coeficiente de variacao = </td>
+                            <td><p id="coeficiente_variacao"></p></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+            </div>
+  </section>
+  <script src="script.js"></script>
+
+   <script type="text/javascript" src="gerar_tudo.js"></script>
+
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script type="text/javascript" src="calculos.js"></script>
+
+    <script type="text/javascript" src="tabela_agrupados.js"></script>
+    <script type="text/javascript" src="tabela_rol.js"></script>
+    <script type="text/javascript" src="tabela_classe.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
