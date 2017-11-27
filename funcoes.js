@@ -272,7 +272,11 @@
             
             document.getElementById(resultadoid).value = res;
         }
+<<<<<<< HEAD
         function totais(linhas)
+=======
+        function totais()
+>>>>>>> 1481fc7db98e294fe03c04ecf7c65b600bc7810e
         {
             var k = 0;
             var totalfi = parseInt(0);

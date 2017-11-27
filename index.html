@@ -52,7 +52,7 @@
   <nav>
     <ul>
       <li title="Inserir dados"><a href="#insercaoDados"><i class="fa fa-pencil-square-o"></i></a></li>
-      <li title="Sobre o grupo"><a href="#sobreGrupo"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+      <li title="Sobre o grupo"><a href="#sobreGrupo"  data-toggle="modal" data-target="#myModal"><i class="fa fa-users" aria-hidden="true"></i></a></li>
     </ul>
   </nav>
 
@@ -110,6 +110,52 @@
                 <br>
             </div>
   </section>
+  
+
+  <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Creditos</h4>
+      </div>
+      <div class="modal-body">
+        <h1 class="text-center">Equipe</h1>
+        
+        <br>
+        <div class="col-md-12">
+          <div class="col-md-6 col-md-offset-4">
+            <h4><i class="fa fa-user" aria-hidden="true"></i> Bruno Eleodoro</h4>
+          </div>
+          <div class="col-md-6 col-md-offset-4">
+            <h4><i class="fa fa-user" aria-hidden="true"></i> Matheus Maldonado</h4>
+          </div>
+          <div class="col-md-6 col-md-offset-4">
+            <h4><i class="fa fa-user" aria-hidden="true"></i> Ana Cecília</h4>
+          </div>
+          <div class="col-md-6 col-md-offset-4">
+            <h4><i class="fa fa-user" aria-hidden="true"></i> Romanti-ezer</h4>
+          </div>
+          <div class="col-md-6 col-md-offset-4">
+            <h4> <i class="fa fa-user" aria-hidden="true"></i> Ruben Fabio</h4>
+          </div>
+          <div class="col-md-6 col-md-offset-4">
+            <h4><i class="fa fa-user" aria-hidden="true"></i> Ricki Warley</h4>
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
   <script src="script.js"></script>
 
    <script type="text/javascript" src="gerar_tudo.js"></script>
