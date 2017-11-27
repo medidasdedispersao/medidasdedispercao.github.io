@@ -66,18 +66,4 @@ function proxima_pagina()
         tabela_classe(elementos);
     }  
   }
-  
-}
-  if(tipoSelecionado == 1)
-  {
-      window.location="gerar_rol.php?linhas="+elementos;
-  }
-  else if(tipoSelecionado == 2)
-  {
-      window.location="gerar.php?linhas="+elementos;
-  }
-  else
-  {
-      window.location="gerar_classe.php?linhas="+elementos;   
-  }
 }
