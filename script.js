@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 5668fd02416346ff54fb30cf22d93c13a204c746
 function gerarCampo(campoPai)
 {
   if (document.getElementById('div-detalhes')) {
@@ -12,18 +8,9 @@ function gerarCampo(campoPai)
   {
     var newdiv = document.createElement('div');
     newdiv.setAttribute("id", "div-detalhes");
-<<<<<<< HEAD
     newdiv.innerHTML = "<br>Insira o número de elementos <br><input type='number' name='linhas' id='linhas' min='3' max='100'>"+
                         "<br><br><button type='button' class=\"btn btn-success\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Espaços</button>";
-=======
-<<<<<<< HEAD
-    newdiv.innerHTML = "<br>Insira o número de elementos <br><input type='number' name='linhas' id='linhas' min='3' max='100'>"+
-                        "<br><input type='button' value='Gerar Espaços' onclick='proxima_pagina();'>";
-=======
-    newdiv.innerHTML = "<br>Insira o número de elementos <br><input type='number' name='numCampos' min='3' max='100'>"+
-                        "<br><input type='button' value='Gerar Espaços'>";
->>>>>>> 5668fd02416346ff54fb30cf22d93c13a204c746
->>>>>>> 1481fc7db98e294fe03c04ecf7c65b600bc7810e
+  
     document.getElementById("insercaoDados").appendChild(newdiv);
   }
 
@@ -31,18 +18,8 @@ function gerarCampo(campoPai)
   {
     var newdiv = document.createElement('div');
     newdiv.setAttribute("id", "div-detalhes");
-<<<<<<< HEAD
     newdiv.innerHTML = "<br>Insira o número de linhas<br><input type='number' name='linhas' id='linhas' min='3' max='30'>"+
                         "<br><br><button type='button' class=\"btn btn-success\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Linhas</button>";
-=======
-<<<<<<< HEAD
-    newdiv.innerHTML = "<br>Insira o número de linhas<br><input type='number' name='linhas' id='linhas' min='3' max='30'>"+
-                        "<br><input type='button' value='Gerar Linhas' onclick='proxima_pagina();'>";;
-=======
-    newdiv.innerHTML = "<br>Insira o número de linhas<br><input type='number' name='numLinhas' min='3' max='30'>"+
-                        "<br><input type='button' value='Gerar Linhas'>";;
->>>>>>> 5668fd02416346ff54fb30cf22d93c13a204c746
->>>>>>> 1481fc7db98e294fe03c04ecf7c65b600bc7810e
     document.getElementById("insercaoDados").appendChild(newdiv);
   }
 }
@@ -53,16 +30,12 @@ function limparDetalhes()
   var child = document.getElementById("div-detalhes");
   parent.removeChild(child);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1481fc7db98e294fe03c04ecf7c65b600bc7810e
+
 function proxima_pagina()
 {
   var dropdown1 = document.getElementById("tipoInsercao");
   var tipoSelecionado = dropdown1.options[dropdown1.selectedIndex].value;
   var elementos = document.getElementById("linhas").value;
-<<<<<<< HEAD
   if(elementos == 0)
   {
     alert('insira o numero de elementos!');
@@ -95,7 +68,6 @@ function proxima_pagina()
   }
   
 }
-=======
   if(tipoSelecionado == 1)
   {
       window.location="gerar_rol.php?linhas="+elementos;
@@ -109,6 +81,3 @@ function proxima_pagina()
       window.location="gerar_classe.php?linhas="+elementos;   
   }
 }
-=======
->>>>>>> 5668fd02416346ff54fb30cf22d93c13a204c746
->>>>>>> 1481fc7db98e294fe03c04ecf7c65b600bc7810e
