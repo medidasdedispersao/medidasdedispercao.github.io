@@ -42,7 +42,7 @@
         {
             var ultima_linha = document.getElementById("l"+(linhas-1)+"c0").value;
             var primeira_linha = document.getElementById('l0c0').value;
-            
+
             var amplitude = getAmplitude(ultima_linha,primeira_linha);
 
             document.getElementById("amplitude").innerHTML = ""+amplitude;
@@ -54,7 +54,7 @@
             totalfi = document.getElementById('resultado1').value;
             totalxifi = document.getElementById('resultado2').value;
             totalxi2fi = document.getElementById('resultado3').value;
-            
+
             variancia = getVariancia(totalxi2fi,totalxifi,totalfi);
             document.getElementById("variancia").innerHTML = ""+Number(variancia).toFixed(2);
         }
@@ -67,7 +67,7 @@
         {
             //getCoeficienteVariacao(desvio_padrao,totalxifi, totalfi)
             coeficiente = getCoeficienteVariacao(desvio_padrao,totalxifi, totalfi);
-            document.getElementById("coeficiente_variacao").innerHTML = Number(coeficiente).toFixed(2) + "%";   
+            document.getElementById("coeficiente_variacao").innerHTML = Number(coeficiente).toFixed(2) + "%";
         }
         function calcular()
         {
@@ -78,7 +78,7 @@
         }
 
     </script>
-    
+
     <script type="text/javascript" src="funcoes.js"></script>
     <script type="text/javascript" src="calculos.js"></script>
 
@@ -105,7 +105,7 @@
                     </tr>
                 </table>
                 <button type="button" class="btn btn-success form-control" onclick="calcular();">CALCULAR</button>
-                
+
                 <br><br>
                 <!-- TABELA DE RESULTADOS -->
                 <div class="col-md-8 col-md-offset-2">

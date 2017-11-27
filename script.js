@@ -9,8 +9,8 @@ function gerarCampo(campoPai)
     var newdiv = document.createElement('div');
     newdiv.setAttribute("id", "div-detalhes");
     newdiv.innerHTML = "<br>Insira o número de elementos <br><input type='number' name='linhas' id='linhas' min='3' max='100'>"+
-                        "<br><br><button type='button' class=\"btn btn-success\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Espaços</button>";
-  
+                        "<br><br><button type='button' class=\"btn btn-primary\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Espaços</button>";
+
     document.getElementById("insercaoDados").appendChild(newdiv);
   }
 
@@ -19,7 +19,7 @@ function gerarCampo(campoPai)
     var newdiv = document.createElement('div');
     newdiv.setAttribute("id", "div-detalhes");
     newdiv.innerHTML = "<br>Insira o número de linhas<br><input type='number' name='linhas' id='linhas' min='3' max='30'>"+
-                        "<br><br><button type='button' class=\"btn btn-success\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Linhas</button>";
+                        "<br><br><button type='button' class=\"btn btn-primary\" value='Gerar Espaços' onclick='proxima_pagina();'>Gerar Linhas</button>";
     document.getElementById("insercaoDados").appendChild(newdiv);
   }
 }
@@ -47,23 +47,24 @@ function proxima_pagina()
     document.getElementById("variancia").innerHTML = "";
     document.getElementById("desvio_padrao").innerHTML = "";
     document.getElementById("coeficiente_variacao").innerHTML = "";
-    
+
     document.getElementById("tabelas2").style.visibility = "visible";
-    
+    document.getElementById("line").style.visibility = "visible";
+
     if(tipoSelecionado == 1)
     {
-        document.getElementById("tipo_tabela").innerHTML = "Tabela ROL";
+        document.getElementById("tipo_tabela").innerHTML = "Inserção por Rol";
         tabela_rol(elementos);
     }
     else if(tipoSelecionado == 2)
     {
-        document.getElementById("tipo_tabela").innerHTML = "Tabela Dados Agrupados";
+        document.getElementById("tipo_tabela").innerHTML = "Tabela de Dados Agrupados";
         tabela_agrupados(elementos);
     }
     else
     {
-        document.getElementById("tipo_tabela").innerHTML = "Tabela dados com intervalo";
+        document.getElementById("tipo_tabela").innerHTML = "Tabela de Dados com intervalos de classe";
         tabela_classe(elementos);
-    }  
+    }
   }
 }

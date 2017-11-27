@@ -6,7 +6,7 @@
     <title>Medidas de Disperção</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link rel="shortcut icon" href="calc.png"/>
 
     <meta property="og:url" content="https://medidasdedispersao.github.io/">
@@ -15,10 +15,7 @@
     <meta property="og:description" content="Ferramenta online para calculo de variancia, desvio padrão e coeficiente de variação, através das tabelas com dados ROL, agrupados e com intervalo de classe.">
     <meta property="og:image" content="https://medidasdedispersao.github.io/banner-min.jpeg">
     <meta property="og:type" content="website">
-
-
-
-   
+    <meta name="theme-color" content="#1A237E">
 
 </head>
 <body>
@@ -44,17 +41,28 @@
       else
       {
           calcularClasse();
-          //window.location="gerar_classe.php?linhas="+elementos;   
+          //window.location="gerar_classe.php?linhas="+elementos;
       }
-      
+
     }
   </script>
-  <nav>
-    <ul>
-      <li title="Inserir dados"><a href="#insercaoDados"><i class="fa fa-pencil-square-o"></i></a></li>
-      <li title="Sobre o grupo"><a href="#sobreGrupo"  data-toggle="modal" data-target="#myModal"><i class="fa fa-users" aria-hidden="true"></i></a></li>
-    </ul>
-  </nav>
+  <div class="navblock navbar-fixed-top">
+    <nav>
+      <ul>
+        <li title="Inserir dados"><a href="#insercaoDados"><i class="fa fa-pencil-square-o"></i></a></li>
+        <li title="Sobre o grupo"><a href="#sobreGrupo"  data-toggle="modal" data-target="#myModal"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="jumbotron text-center">
+    <div class="container-fluid">
+    <div class="h1">Medidas de Dispersão</div>
+    <hr class="my-4">
+    <p class="text-muted">Esta é uma ferramenta que foi desenvolvida a partir de um trabalho proposto pela professora Paula Sanches, da disciplina de Estatística da Fatec de Americana</p>
+    <p class="text-dark">Aqui você pode calcular: Variância amostral, desvio padrão e coeficiente de variação</p>
+    </div>
+  </div>
+
 
   <section id="insercaoDados">
     <form method="post" >
@@ -67,12 +75,15 @@
       </select>
     </form>
   </section>
+
+  <hr id="line" style="visibility: hidden;">
+
   <section id="tabelas2" style="visibility: hidden;">
     <div class="col-md-8 col-md-offset-2" id="card">
                 <br><br>
                 <h2 class="text-center" id="tipo_tabela"></h2>
                 <br><br>
-                
+
                   <div id="tabelas">
 
                   </div>
@@ -84,25 +95,25 @@
                 <button type="button" class="btn btn-success form-control" onclick="setLinhas();calcular();">CALCULAR</button>
                 <br><br>
                 <button type="button" class="btn btn-danger form-control" onclick="setLinhas();proxima_pagina();">LIMPAR</button>
-                
+
                 <br><br>
                 <!-- TABELA DE RESULTADOS -->
                 <div class="col-md-8 col-md-offset-2">
                     <table class="table table-responsive table-bordered">
                         <tr class=".success">
-                            <td>Amplitude = </td>
+                            <td>Amplitude</td>
                             <td><p id="amplitude"></p></td>
                         </tr>
                         <tr class=".success">
-                            <td>Variancia = </td>
+                            <td>Variância</td>
                             <td><p id="variancia"></p></td>
                         </tr>
                         <tr class=".success">
-                            <td>Desvio padrao = </td>
+                            <td>Desvio padrão</td>
                             <td><p id="desvio_padrao"></p></td>
                         </tr>
                         <tr class=".success">
-                            <td>Coeficiente de variacao = </td>
+                            <td>Coeficiente de variação</td>
                             <td><p id="coeficiente_variacao"></p></td>
                         </tr>
                     </table>
@@ -110,7 +121,7 @@
                 <br>
             </div>
   </section>
-  
+
 
   <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
@@ -120,11 +131,11 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Creditos</h4>
+        <h4 class="modal-title">Créditos</h4>
       </div>
       <div class="modal-body">
         <h1 class="text-center">Equipe</h1>
-        
+
         <br>
         <div class="col-md-12">
           <div class="col-md-6 col-md-offset-4">
@@ -140,7 +151,7 @@
             <h4><i class="fa fa-user" aria-hidden="true"></i> Romanti-ezer</h4>
           </div>
           <div class="col-md-6 col-md-offset-4">
-            <h4> <i class="fa fa-user" aria-hidden="true"></i> Ruben Fabio</h4>
+            <h4> <i class="fa fa-user" aria-hidden="true"></i> Ruben Fábio</h4>
           </div>
           <div class="col-md-6 col-md-offset-4">
             <h4><i class="fa fa-user" aria-hidden="true"></i> Ricki Warley</h4>
@@ -156,6 +167,11 @@
   </div>
 </div>
 
+<footer class="col-md-12">
+  <div class="p-footer">
+    <p class="text-white" data-toggle="modal" data-target="#myModal">Desenvolvido por alunos do 2º ADS - 2017</p>
+  </div>
+</footer>
   <script src="script.js"></script>
 
    <script type="text/javascript" src="gerar_tudo.js"></script>
