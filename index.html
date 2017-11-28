@@ -50,16 +50,17 @@
     <nav>
       <ul>
         <li title="Inserir dados"><a href="#insercaoDados"><i class="fa fa-pencil-square-o"></i></a></li>
-        <li title="Sobre o grupo"><a href="#sobreGrupo"  data-toggle="modal" data-target="#myModal"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+        <li title="Sobre o grupo"><a href="#sobreGrupo" data-toggle="modal" data-target="#myModal"><i class="fa fa-users" aria-hidden="true"></i></a></li>
+        <li title="Teoria do tema"><a href="#medidasDispersao"><i class="fa fa-book" aria-hidden="true"></i></a></li>
       </ul>
     </nav>
   </div>
   <div class="jumbotron text-center">
     <div class="container-fluid">
     <div class="h1">Medidas de Dispersão</div>
-    <hr class="my-4">
+    <hr style="width: 100%; border:1px solid lightgray;">
     <p class="text-muted">Esta é uma ferramenta que foi desenvolvida a partir de um trabalho proposto pela professora Paula Sanches, da disciplina de Estatística da Fatec de Americana</p>
-    <p class="text-dark">Aqui você pode calcular: Variância amostral, desvio padrão e coeficiente de variação</p>
+    <p class="text-dark">Aqui você pode calcular: Amplitude total, variância amostral, desvio padrão e coeficiente de variação</p>
     </div>
   </div>
 
@@ -78,7 +79,7 @@
 
   <hr id="line" style="visibility: hidden;">
 
-  <section id="tabelas2" style="visibility: hidden;">
+  <section id="tabelas2" style="visibility: hidden">
     <div class="col-md-8 col-md-offset-2" id="card">
                 <br><br>
                 <h2 class="text-center" id="tipo_tabela"></h2>
@@ -101,7 +102,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <table class="table table-responsive table-bordered">
                         <tr class=".success">
-                            <td>Amplitude</td>
+                            <td>Amplitude total</td>
                             <td><p id="amplitude"></p></td>
                         </tr>
                         <tr class=".success">
@@ -157,15 +158,67 @@
             <h4><i class="fa fa-user" aria-hidden="true"></i> Ricki Warley</h4>
           </div>
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <p class="text-center h4">Análise e Desenvolvimento de Sistemas</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
       </div>
     </div>
-
   </div>
 </div>
+
+<!-- Seção da TEORIA -->
+<section class="container-fluid">
+  <div class="row">
+    <h2 class="h2 col-sm-12 text-center" id="medidasDispersao">Teoria - Medidas de Dispersão</h2>
+    <hr class="col-sm-8 col-sm-offset-2" style="margin-top: 0px; margin-bottom: 10px">
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <p class="text-justify"><i class="fa fa-quote-left" aria-hidden="true"></i>
+       Para completar as informações contidas nas medidas de posição central, usamos <b>as medidas de dispersão que analisam o afastamento
+       dos dados em relação à média, ou seja, essas medidas avaliam, indicam o quanto os dados estão dispersos em torno da média, o grau de
+       viabilidade dos dados</b>. Se todos os valores da série de dados forem iguais, então não há dispersão.
+       <i class="fa fa-quote-right" aria-hidden="true"></i> - Vários autores, Estatística Básica - 3ª Edição.
+       </p>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="text-center">Amplitude total</h3>
+      <p class="text-center">É a diferença entre o maior e o menor da série de dados. No caso de dados agrupados em tabelas com intervalo de classe,
+      será a diferença entre o limite superior da última classe e o limite inferior da primeira classe</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="text-center">Variância e desvio padrão</h3>
+      <p class="text-center">A amplitude total é limitada, por considerar apenas os valores extremos.</p>
+      <p class="text-center">Para resolver essa limitação, podemos calcular a variância e o desvio padrão, que levam em consideração
+        todos os valores da série de dados.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3 class="text-center">Coeficiente de variação</h3>
+      <p class="text-center">O coeficiente de variação, também conhecido como dispersão relativa, é a razão entre o desvio padrão
+      e a média aritmética da série de dados, frequentemente expresso em porcentagem.</p>
+      <p class="text-center">Ele caracteriza a dispersão dos dados em termos relativos ao seu valor médio.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <hr>
+      <p class="text-center"><span style="font-weight: bold">Fonte das informações:</span> Livro de Estatística Básica - 3ª Edição</p>
+    </div>
+  </div>
+
+</section>
 
 <footer class="col-md-12">
   <div class="p-footer">
